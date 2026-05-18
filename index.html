@@ -35,7 +35,7 @@
 
 <div class="pa" id="pa" style="display:none"><h2>Paste any content to clean</h2><textarea id="pt" placeholder="Paste an article, tweet, or any content..."></textarea><button class="btn bo" onclick="cleanPaste()" style="margin-top:8px">Extract Signal ◇</button></div>
 
-<div class="ftr"><p>FallSignal · Clean News · No Manipulation · Sovereign HTML</p><p>18 Manipulation Techniques · Context Restored · Signal Only</p><p>Built by AI Native Solutions · ◊·κ=1</p></div>
+<div class="ftr"><p>FallSignal · Clean News · No Manipulation · Sovereign HTML</p><p>18 Manipulation Techniques · Context Restored · Signal Only</p><p>Built by <a href="https://fall127agents.github.io/ai-nativesolutions/" target="_blank" style="color:inherit;text-decoration:underline">AI Native Solutions</a> · ◊·κ=1</p></div>
 </div><script>
 let P=JSON.parse(localStorage.getItem('fsn3')||'null');
 function save(){const t=Array.from(document.querySelectorAll('#tops .tg.on')).map(e=>e.dataset.t);if(!t.length){alert('Pick at least one topic');return}const k=document.getElementById('akey').value.trim();if(!k){alert('API key needed');return}P={topics:t,location:document.getElementById('loc').value.trim(),work:document.getElementById('wrk').value.trim(),provider:document.getElementById('prov').value,key:k};localStorage.setItem('fsn3',JSON.stringify(P));document.getElementById('su').style.display='none';loadFeed()}
