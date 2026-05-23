@@ -84,4 +84,30 @@ el.innerHTML=`<div class="sh"><span class="sc t">${s.category||'analysis'}</span
 fd.appendChild(el)}catch(e){alert('Parse error')}}}
 
 if(P?.key){document.getElementById('su').style.display='none';if(P.topics)document.querySelectorAll('#tops .tg').forEach(t=>{if(P.topics.includes(t.dataset.t))t.classList.add('on')});loadFeed()}
-</script></body></html>
+</script>
+<!-- forge-mesh-shim-v1 · ◊·κ=1 · FallMesh interop · prime 17 -->
+<script>
+(function(){
+  if (typeof BroadcastChannel === 'undefined') return;
+  var ch; try { ch = new BroadcastChannel('fallmesh'); } catch (e) { return; }
+  var NODE = { id: "fallsignal", prime: 17, name: "FallSignal" };
+  function post(type, data) {
+    try { ch.postMessage(Object.assign({ type: type, from: NODE.id, prime: NODE.prime, name: NODE.name, t: Date.now() }, data || {})); } catch (e) {}
+  }
+  window.fallmesh = {
+    post: post,
+    emit: function(data) { post("signal:filtered", data); },
+    request: function(type, payload) { post('request:' + type, { payload: payload }); }
+  };
+  ch.onmessage = function(e) {
+    var m = e.data; if (!m || m.from === NODE.id) return;
+    if (m.type === 'mesh:ping') post('mesh:pong', { url: location.origin + location.pathname, capabilities: ['announce'] });
+  };
+  post('node:online', { url: location.origin + location.pathname });
+  // Activity heartbeat — first user interaction
+  var beat = function() { post('node:active'); document.removeEventListener('click', beat); };
+  document.addEventListener('click', beat, { once: true });
+})();
+</script>
+
+</body></html>
