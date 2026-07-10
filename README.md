@@ -1,23 +1,19 @@
-# FallSignal
+# fallsignal
 
-**Clean News Engine**
+> Sovereign single-file tool
 
-Sovereign news reader that strips manipulation and delivers signal. Detects and removes 18 manipulation techniques from news articles.
+## Install
 
-## Features
+```
+(see source for install)
+```
 
-- 18 manipulation technique taxonomy: framing, anchoring, false equivalence, emotional loading, omission, strawman, appeal to authority, bandwagon, cherry-picking, slippery slope, ad hominem, whataboutism, loaded questions, false dichotomy, appeal to fear, sunk cost, availability bias, confirmation bias
-- Real-time manipulation stripping from any news article
-- Signal-to-noise ratio scoring
-- Clean article view — just the facts
-- Source credibility tracking over time
-- Multi-provider AI: Gemini (free) → DeepSeek (free) → Anthropic (paid)
-- Dark, distraction-free reading interface
+## Links
 
-## Run
+- FallMarket listing: https://sjgant80-hub.github.io/fallmarket/listing.html?id=fallsignal
+- Source: https://github.com/sjgant80-hub/fallsignal
+- Playground: https://sjgant80-hub.github.io/fallsignal/
 
-Double-click `FallSignal.html`. Paste a news article. Get the signal.
+## License
 
----
-
-Part of the Fall tool suite. News without the noise.
+MIT · Copyright 2026 AI-Native Solutions · https://ai-nativesolutions.com
